@@ -3,6 +3,7 @@ import './client.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
+import { Router, Route, Link } from 'react-router';
 
 function getTussit() {
 return axios.get('/api/tussi').then((response) => {
@@ -22,13 +23,14 @@ const laihtutetut = losot.map (loso => 'laihempi' + loso);
 
 const HelloWorld = React.createClass({
     render: function () {
-        return (
-            <div>
+    return (
+        <div>
+            <Link to={`/hello/${this.props.name}`}>
                 Hello {this.props.name}
-            </div>
-            );
-    }
-
+            </Link>
+        </div>
+    );
+}
 });
 
 
@@ -48,6 +50,8 @@ const HelloWorldApp = React.createClass({
             <Counterizer
             count={this.state.count}
             onIncrementCounter={this.IncrementCounter}/>
+
+            {this.props.children}
              </div>
         );
     },
@@ -93,8 +97,28 @@ const HelloWorldApp = React.createClass({
         );
     }
 });
-ReactDOM.render
-        (<HelloWorldApp names={['Laiva', 'Lato', 'Ello']}/>,
-        document.getElementById('app')
 
+const Greeter = React.createClass({
+    render: function() {
+        const { name } = this.props.params;
+
+        return (
+            <h2>
+                Helloooo {name}
+            </h2>
         );
+    }
+});
+
+const routes = (
+    <Router>
+        <Route path="/" component={HelloWorldApp}>
+            <Route path="/hello/:name" component={Greeter}></Route>
+        </Route>
+    </Router>
+);
+
+ReactDOM.render(
+    routes,
+    document.getElementById('app')
+);
