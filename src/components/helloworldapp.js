@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import {Nav, NavItem} from 'react-bootstrap';
+import { Link } from 'react-router';
 
 import HelloWorld from './helloworld';
 import Counterizer from './counterizer';
@@ -43,6 +44,10 @@ const HelloWorldApp = React.createClass({
 
             <h1>Supp</h1>
             <h2>moi</h2>
+
+            <Link to={`/content/`}>
+                Content
+            </Link>
 
             {names.map((name,i) =>
                 <HelloWorld key={i} name={name}/>

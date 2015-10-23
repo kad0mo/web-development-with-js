@@ -10,6 +10,7 @@ import HelloWorld from './components/helloworld';
 import HelloWorldApp from './components/helloworldapp';
 import Counterizer from './components/counterizer';
 import Greeter from './components/greeter';
+import Content from './components/content';
 
 
 
@@ -19,6 +20,7 @@ const routes = (
     <Router>
         <Route path="/" component={HelloWorldApp}>
             <Route path="/hello/:name" component={Greeter}></Route>
+            <Route path="/content/" component={Content}></Route>
         </Route>
     </Router>
 );
