@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
-import Bootstrap from 'react-boostrap';
+import Bootstrap from 'react-bootstrap';
 
 const HelloWorld = React.createClass({
     render: function () {

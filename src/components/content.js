@@ -1,17 +1,17 @@
 import React from 'react';
 import Bootstrap from 'react-bootstrap';
 
-const Greeter = React.createClass({
+const Content = React.createClass({
     render: function() {
-        const { name } = this.props.params;
+
 
         return (
             <h2>
-                Helloooo {name}
+                Contenttia
             </h2>
         );
     }
 });
 
 
-export default Greeter;
+export default Content;

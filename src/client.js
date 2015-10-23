@@ -1,6 +1,6 @@
-import 'bootstrap/dist/css/boostrap.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.css';
 import './client.css';
-import Bootstrap from 'react-boostrap';
+import Bootstrap from 'react-bootstrap';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
@@ -10,6 +10,8 @@ import HelloWorld from './components/helloworld';
 import HelloWorldApp from './components/helloworldapp';
 import Counterizer from './components/counterizer';
 import Greeter from './components/greeter';
+
+
 
 
 

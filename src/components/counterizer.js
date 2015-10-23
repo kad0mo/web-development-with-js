@@ -1,5 +1,5 @@
 import React from 'react';
-import Bootstrap from 'react-boostrap';
+import Bootstrap from 'react-bootstrap';
 
 const Counterizer = React.createClass({
   render: function() {
