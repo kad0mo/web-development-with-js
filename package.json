@@ -57,6 +57,7 @@
     "react-side-effect": "^1.0.2",
     "react-transform-catch-errors": "^1.0.0",
     "react-transform-hmr": "^1.0.1",
+    "react-bootstrap": "^0.16.1",
     "redbox-react": "^1.1.1",
     "redux": "^3.0.2",
     "redux-devtools": "^2.1.5",

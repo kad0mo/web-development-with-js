@@ -1,4 +1,5 @@
-
+import React from 'react';
+import Bootstrap from 'react-boostrap';
 
 const Greeter = React.createClass({
     render: function() {
@@ -13,4 +14,4 @@ const Greeter = React.createClass({
 });
 
 
-export default Content;
+export default Greeter;

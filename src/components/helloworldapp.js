@@ -1,5 +1,22 @@
 import React from 'react';
-import api from '../api';
+import axios from 'axios';
+import Bootstrap from 'react-boostrap';
+import 'bootstrap/dist/css/boostrap.css';
+import HelloWorld from './helloworld';
+import Counterizer from './counterizer';
+
+function getTussit() {
+  return axios.get('/api/tussi').then((response) => {
+    return response.data;
+
+
+  const tussit = getTussit();
+
+  tussit.then((data) => console.log(data));
+    });
+
+}
+
 
 const HelloWorldApp = React.createClass({
     render: function () {
